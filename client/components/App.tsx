@@ -1,9 +1,22 @@
+import Home from './Home'
+import Customer from './Customer'
+import Coc from './Coc'
+import { Route, Routes } from 'react-router-dom'
+
 function App() {
   return (
-    <div>
-      <h1>App</h1>
-      <p>React development has begun!</p>
-    </div>
+    <>
+      <div className="container, has-text-centered">
+        <h1 className="title">ElectricALL</h1>
+        <div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/customer" element={<Customer />} />
+            <Route path="/coc" element={<Coc />} />
+          </Routes>
+        </div>
+      </div>
+    </>
   )
 }
 
